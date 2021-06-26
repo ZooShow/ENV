@@ -1,9 +1,9 @@
 #!/bin/bash
 
-if [ -n "$1" ]
+if [ -n "$a" ]
 then
     f=1
-    n=$1
+    n=$a
 
     if (( n<0 ))
     then
@@ -17,10 +17,10 @@ then
         echo $f
     fi
 
-    if [ -n "$2" ]
+    if [ -n "$1" ]
     then
 
-        if [[ "$2" == "-S" ]]
+        if [[ "$1" == "-S" ]]
         then
             if [[ $(file fact.txt) == "fact.txt: empty" ]]
             then
@@ -31,7 +31,7 @@ then
                 echo $f > fact.txt
             fi
 
-        elif [[ "$2" == "-F" ]]
+        elif [[ "$1" == "-F" ]]
         then 
             find 
         else
